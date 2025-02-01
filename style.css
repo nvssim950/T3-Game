@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root{
+--main-game-size:400px;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+background-color:#2e346e;
+box-sizing: border-box;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+font-family: "Chakra Petch", serif;
+padding: 0;
+margin: 0;
+padding-bottom:  100px; 
+transition: all 0.3s ease;
+text-shadow: 
+2px 2px 0px black,  /* Bottom-right shadow */
+-2px 2px 0px black, /* Bottom-left shadow */
+2px -2px 0px black, /* Top-right shadow */
+-2px -2px 0px black
+
+}
+.main-game{
+display: flex;
+    background-color: #2e346e;
+    width: var(--main-game-size);
+    height: var(--main-game-size);
+   gap: 5px;
+    flex-wrap: wrap;
+    padding: 0;
+    border-radius: 15px;
+    margin-bottom: 50px;
+
+}
+.case{
+    display: flex;
+    color: white;
+    background-color: hsla(234, 48%, 20%, 0.822);
+    flex-grow: 1;
+    max-width: 200px;
+    width: 123px;
+    height: 123px;
+    font-size: 125px;
+ justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 0.3px solid white;
+  box-shadow: 4px 2px 0.5px hsla(234, 54%, 11%, 0.925) ;
+}
+
+.score{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    margin: 40px;
+    text-align: center;
+    line-height: 7px;
+    margin-top: 150px;
+}
+h3{
+    font-size:30px;
+    
+}
+p{
+    font-size: 50px;
+
+}
+
+.case:hover{
+
+background-color: hsla(235, 41%, 27%, 0.418);
+}
+#reset{
+    width: 150px;
+    background-color: white;
+    text-decoration: none;
+    border: 0.3px solid white;
+    display: flex;
+    place-content: center;
+    margin-bottom: 40px;
+    background-color:hsla(234, 48%, 20%, 0.822) ;
+    padding: 8px 30px;
+    border-radius: 15px;
+    box-shadow: 4px 2px 0.5px hsla(234, 54%, 11%, 0.925) ;
+}
+#reset:hover{
+    background-color: hsla(235, 41%, 27%, 0.418);  
+    cursor: pointer;
+}
+    #reset img{
+     width: 40px ; 
+     height: auto;
+    }
+
+
+    .player-1,.player-2 {
+    color: wheat;
+}

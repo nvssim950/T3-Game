@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tic tac toe</title>
+</head>
+<body>
+    <div class="score">
+        <div class="player-1">
+        <h3>Player 1</h3>
+        <p id="player-2-score">0</p>
+        </div>
+        <div class="player-2">
+            <h3>Player 2</h3>
+            <p id="player-1-score">0</p>
+        </div>
+    </div>
+    <main class="main-game">
+        <div id="c1" class="case"></div>
+        <div id="c2" class="case"></div>
+        <div id="c3" class="case"></div>
+        <div id="c4" class="case"></div>
+        <div id="c5" class="case"></div>
+        <div id="c6" class="case"></div>
+        <div id="c7" class="case"></div>
+        <div id="c8" class="case"></div>
+        <div id="c9" class="case"></div>
+
+    </main>
+    <audio id="sound" preload="auto" src="./elements/click-21156.mp3"></audio>
+    <audio src="./elements/collect-points-190037.mp3" id="win" preload="auto"></audio>
+    <button id='reset' onclick="reset_game() ;sound.play()"><img src="./elements/undo (1).png" ></button>
+<script src="Test.js" ></script>
+</body>
+</html>
