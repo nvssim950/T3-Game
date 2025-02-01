@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --yellow:gold;
+    --blue:cadetblue;
+}
+html,body{
+height: 100%;
+background-color: #16242b;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Roboto", serif;
+  font-weight: 340;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+footer p{
+    font-size: 14px;
+    color: white;
+    padding-top: 20px;
+    
+}
+a{
+    font-size: 14px;
+   color: rgb(168, 144, 5) ;
+   text-decoration: none;
+
+}
+
+.grid{
+display: grid;
+grid-template-columns: repeat(3,80px);
+grid-template-rows: 45px repeat(3,80px) 45px;
+gap: 10px;
+}
+.turn{
+grid-column-end: 3;
+grid-column-start: 1;
+display: flex;
+align-items: center;
+align-self: center;
+gap: 15px;
+color:gold;
+}
+.turn p{
+    font-size: 15px;
+    font-weight: 500;
+    animation: 0.6s ease-in-out turn;
+    letter-spacing: 2px;
+    
+}
+.turn i{
+    font-size: 1.7rem;
+    margin-left: 10px;
+    animation: turn-icon 0.6s   ease-in-out;
+
+}
+@keyframes turn-icon{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.4);}
+    100%{transform: scale(1);}
+
+
+}
+@keyframes turn {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    50%{
+        opacity: 0.2;
+        transform: translateX(-15px);
+    }
+
+    100%{
+        opacity: 100%;
+        transform:translateX(0px) ;
+    }
+    
+}
+.menu{
+    position: relative;
+}
+.menu-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(211, 211, 211, 0.05);
+    border: 1px solid transparent;
+
+}
+.square:hover{
+    cursor: pointer;
+    opacity: 80%;
+
+}
+.square{
+background-color: hsla(199, 65%, 40%, 0.356);
+height: 100%;
+width: 100%;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 3rem;
+}
+.score{
+background-color: blue;
+}
+@media (min-width: 750px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,130px);
+        grid-template-rows: 50px repeat(3,130px) 45px;
+        gap: 20px;
+    }
+
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px ,rgba(0, 0, 0, 0.8) 0px 7px 13px -3px ;
+}
+
+
+.items{
+    position: absolute;
+    z-index: 10;
+    top: 60px;
+    right: 0px ;
+    background-color: #203139;
+    border-radius: 2px;
+    padding: 10px ;
+}
+.items button{
+    background-color: transparent;
+    padding: 8px;
+    color: white;
+    border: transparent;
+   
+}
+.items button:hover{
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.border{
+    border: 1px #4f585e solid;
+}
+.hidden {
+    display: none !important;
+}
+.score{
+display: flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 60px;
+border-radius: 10px;
+}
+.score p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+}
+.score span{
+    font-size: 12px;
+    margin-top: 2px;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+.score:hover{
+    cursor:default;
+}
+.modal{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.8);
+}
+.modal-contents{
+    transition: all 2s ease ;
+    transform: translateY(-80px);
+    height: 150px;
+    width: 100% ;
+    max-width: 300px;
+    background-color: #203139;
+    border-radius: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin: 10px;
+
+}
+.modal-contents button{
+    padding: 10px 12px;
+    background: rgb(104, 174, 177);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    
+}
+.yellow{
+   color: var(--yellow);
+}
+.blue{
+  color: var(--blue);
+}
+@keyframes win {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3) ;
+    }
+    100%{
+        transform: scale(1) ;
+    }
+    
+}
+@keyframes win2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.7) ;
+    }
+    100%{
+        transform: scale(1) ;
+    }
+    
+}
